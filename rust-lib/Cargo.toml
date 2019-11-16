@@ -1,0 +1,15 @@
+[package]
+name = "rust-lib"
+version = "0.1.0"
+authors = ["hoangpq <pquochoang2007@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+[target.'cfg(target_os="android")'.dependencies]
+jni = { version = "0.5", default-features = false }
+image = "0.22.0"
+num-complex = "0.2"
+
+[lib]
+name = "rust"
+crate-type = ["dylib"]
